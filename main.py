@@ -1,17 +1,14 @@
 #  Raja mantri chor sipahi game
 #  Python 3
-#This is a multiplayer games which first asks for the players name and then assign randomly assign any role.
+#This is a multiplayer game which first asks for the player name and then randomly assigns any role.
 #Now the Mantri who is you or any other person sitting next to you have to type the correct name.
-#Since I doesn't have much knowledge of server processing, this game is not entirely multiplayer.
-#Either he four people have to be together or only one person can play this by just typing any four names.
-#This is like a very begginers version. 
-#I may improve it over time and maybe in future you can play this in your phone with friends. 
+#This is like a very beginners version. 
+#I may improve it over time and maybe in future, you can play this on your phone with friends. 
 #Ciao
 
 
-
-#Import the random libary to randomly assign roles and time libary to use the function sleep
-#The program can run without the time and sleep(). I used it for little suspence, thrill and just to slow it a little bit.
+#Import the random library to randomly assign roles and time library to use the function sleep.
+#The program can run without time and sleep(). I used it for little suspense, thrill and just to slow it a little bit.
 import random
 import time
 
@@ -38,7 +35,7 @@ def playerInput():
     for i in range(0,4):
         player.append(input("Enter name: "))
 
-    #if players is less than 4 or no name is given then Sorry bro you can't play
+    #if players are less than 4 or no name is given then Sorry bro you can't play
     if len(player)<4 or '' in player:
         print("Less player")
     else:
@@ -53,7 +50,7 @@ def assignment(players,points):
     i=0
     picked=picking()
 
-    #We create a dictionary where Players and points together creates a list which are the values to the key of the role name
+    #We create a dictionary where Players and points together create a list which are the values to the key of the role name
     for item in picked:
         assign[item]=[players[i],points[i]]
         i+=1
@@ -66,7 +63,7 @@ def assignment(players,points):
     return assign
 
 
-#Keeping track of the scores and prining them
+#Keeping track of the scores and printing them
 def scoress(assign):
     scores=list(assign.values())
     scores
